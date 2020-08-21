@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/styles.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>    <title>Weather App</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="the-whole-app">
+            <form class="search-form" id="search-form">
+                <div class="row">
+                    <div class="col-6">
+                        <input type="search" 
+                        placeholder="Enter the city here.." 
+                        class="form-control shadow-sm"
+                        id="city-input"
+                         />
+                    </div>
+                    <div class="col-3">
+                        <input type="submit" 
+                        value="Search" 
+                        class=" form-control btn btn-primary" />
+                    </div>
+                    <div class="col-3">
+                        <button
+                          class="btn btn-success w-100"
+                          id="current-location-button"
+                          > Current
+                        </button>
+                      </div>
+                </div>
+            </form>
+            <br />
+            <h1 id="city">
+                Dublin, County Dublin
+            </h1>
+            <ul>
+                <li id="date"></li>
+                <li id="description"></li>
+              </ul>
+
+            <div class="row">
+                <div class="col-6">
+                    <img src="https://ssl.gstatic.com/onebox/weather/64/rain.png" alt="">
+                    <span class="temperature" id="temperature">19</span
+                        ><span class="units">
+                          <a href="#" id="celsius-link">°C</a> |
+                          <a href="#" id="fahrenheit-link">°F</a>
+                </div>
+                <div class="col-6">
+                    <ul>
+                        <li>Humidity: <span id="humidity"></span>%</li>
+                        <li>Wind: <span id="wind"></span> km/h</li>
+                    </ul>
+                </div>
+                <br />
+                <div class="weekdays">
+                    <div class="row">
+                        <div class="col">
+                            Mon
+                        </div>
+                        <div class="col">
+                            Tue
+                        </div>
+                        <div class="col">
+                            Wed
+                        </div>
+                        <div class="col">
+                            Thu
+                        </div>
+                        <div class="col">
+                            Fri
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            18°|10°
+                        </div>
+                        <div class="col">
+                            17°|8°
+                        </div>
+                        <div class="col">
+                            17°|13°
+                        </div>
+                        <div class="col">
+                            21°|14°
+                        </div>
+                        <div class="col">
+                            18°|13°
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <script src="src/index.js"></script>
+</body>
+
+
+</html>
